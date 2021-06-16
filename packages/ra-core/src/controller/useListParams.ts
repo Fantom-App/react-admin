@@ -362,7 +362,7 @@ export const getQuery = ({
 
     return {
         ...query,
-        page: getNumberOrDefault(query.page, 1),
+        page: query.page ? query.page : 1,
         perPage: getNumberOrDefault(query.perPage, 10),
     } as ListParams;
 };
